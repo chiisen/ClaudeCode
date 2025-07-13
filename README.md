@@ -273,4 +273,4 @@ Claude Code 會先訂一份 Check List
 Claude Code 任務執行完畢
 並回報結果
 與說明測試方式
-
+![Todo List 截圖](./images/ClaudeCodeTodoList.png)
