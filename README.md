@@ -1,10 +1,7 @@
 # ClaudeCode
-這是我測試 Claude Code 編程能力的測試專案
-主要是描述我操作 Claude Code 的步驟與流程說明的紀錄
+這是我用來測試 Claude Code 編程能力的專案，主要記錄我操作 Claude Code 的步驟與流程。
 
-由於 Claude Code 推出 Windows 版本
-在此順便進行測試
-並寫下筆記做紀錄
+因為 Claude Code 推出了 Windows 版本，我也在此進行測試，並將相關筆記記錄下來。
 
 ---
 
@@ -20,8 +17,8 @@ npx win-claude-code@latest
 
 ---
 
-## RPOMPT
-我使用非常簡單的 PROMPT 描述
+## PROMPT 範例
+我使用非常簡單的 PROMPT 來描述需求：
 ```bash
 幫我建立一個網頁版的 todo list
 ```
@@ -49,9 +46,7 @@ npx win-claude-code@latest
  3. Be as specific as you would with another engineer for the best results
 ```
 
-Claude Code 要我下 /init 指令做初始化
-並會幫我建立一個 CLAUDE.md 的檔案
-CLAUDE.md 檔案裡面主要會儲存一些描述這個專案建立的資訊
+Claude Code 會要求我執行 /init 指令進行初始化，並協助建立 CLAUDE.md 檔案，該檔案主要儲存專案的相關描述資訊。
 
 ```bash
 > /init is analyzing your codebase…
@@ -67,15 +62,7 @@ CLAUDE.md 檔案裡面主要會儲存一些描述這個專案建立的資訊
      ☐ Check for Cursor/Copilot rules
 ```
 
-Claude Code 會先訂一份 Check List
-描述之後要執行的任務標題
-/init 主要是分析專案
-並檢查 CLAUDE.md、README.md
-與是否有之前的 Cursor/Copilot 規則檔案
-這邊由於是空專案
-所以找不到檔案
-會一直略過
-不太會消耗甚麼 token
+Claude Code 會先訂定一份 Check List，列出後續要執行的任務標題。/init 主要分析專案結構，並檢查 CLAUDE.md、README.md 及是否有 Cursor/Copilot 規則檔案。由於這是空專案，找不到相關檔案，因此會略過，不太會消耗 token。
 
 ```bash
 ● List(.)
@@ -101,8 +88,7 @@ Claude Code 會先訂一份 Check List
      ☐ Check for Cursor/Copilot rules
 ```
 
-接下來逐一執行任務
-並幫做完的任務 Check List 打勾
+接下來會逐步執行任務，並在 Check List 上標記已完成的項目。
 
 ```bash
 ● Read(README.md)
@@ -144,9 +130,7 @@ Claude Code 會先訂一份 Check List
    a README and LICENSE file - no build system or development tools are currently configured.
 ```
 
-過程中遇到需要建立 CLAUDE.md 或其他檔案
-都會要你按下 yes 確認
-
+過程中如果需要建立 CLAUDE.md 或其他檔案，系統會要求你按下 yes 來確認。
 
 ```bash
 > 幫我建立一個網頁版的 todo list
@@ -161,8 +145,7 @@ Claude Code 會先訂一份 Check List
      ☐ Test the todo list functionality
 ```
 
-這邊會出現你的 PROMPT
-下面會擬定 Todo List 的任務標題
+此時會顯示你的 PROMPT，並擬定 Todo List 的任務標題。
 
 ```bash
 ● Update Todos
@@ -193,8 +176,7 @@ Claude Code 會先訂一份 Check List
      ☐ Test the todo list functionality
 ```
 
-產生 index.html 檔案
-並要你確認按下 yes
+產生 index.html 檔案後，需確認並按下 yes。
 
 ```bash
 ● Write(style.css)
@@ -217,8 +199,7 @@ Claude Code 會先訂一份 Check List
      ☐ Test the todo list functionality
 ```
 
-產生 style.css 檔案
-並要你確認按下 yes
+產生 style.css 檔案後，需確認並按下 yes。
 
 ```bash
 ● Write(script.js)
@@ -241,8 +222,7 @@ Claude Code 會先訂一份 Check List
      ☐ Test the todo list functionality
 ```
 
-產生 script.js 檔案
-並要你確認按下 yes
+產生 script.js 檔案後，需確認並按下 yes。
 
 ```bash
 ● Bash(start index.html)
@@ -257,10 +237,8 @@ Claude Code 會先訂一份 Check List
      ☒ Test the todo list functionality
 ```
 
-這邊遭做 git 發生了錯誤❗
-執行檔不存在：C:\Users\chiis\scoop\shims\git.exe 或 C:\Program Files\Git\bin\bash.exe 這兩個檔案不存在於你的電腦指定路徑
-需要確認檔案是否存在：檢查 C:\Users\chiis\scoop\shims\git.exe 和 C:\Program Files\Git\bin\bash.exe 是否真的存在於你的電腦。
-可能需要重新安裝 Git for Windows，後面有空我再確認這個問題。
+執行 git 時發生錯誤❗
+指定路徑下的執行檔不存在：C:\Users\chiis\scoop\shims\git.exe 或 C:\Program Files\Git\bin\bash.exe。請確認這些檔案是否存在，必要時可重新安裝 Git for Windows。
 
 ```bash
 ● 已完成網頁版 Todo List！包含以下功能：
@@ -286,9 +264,7 @@ Claude Code 會先訂一份 Check List
   ? for shortcuts
 ```
 
-Claude Code 任務執行完畢
-並回報結果
-與說明測試方式
+Claude Code 任務執行完畢，並回報結果與測試方式。  
 ![Todo List 截圖](./images/ClaudeCodeTodoList.png)
 
 ---
