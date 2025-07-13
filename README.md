@@ -2,6 +2,22 @@
 這是我測試 Claude Code 編程能力的測試專案
 主要是描述我操作 Claude Code 的步驟與流程說明的紀錄
 
+由於 Claude Code 推出 Windows 版本
+在此順便進行測試
+並寫下筆記做紀錄
+
+---
+
+## Windows 安裝方式
+請參考: [GitHub: Windows版 Claude Code](https://github.com/somersby10ml/win-claude-code/blob/main/docs/languages/README.zh.md)
+```bash
+# 全局安装 Claude Code
+npm install -g @anthropic-ai/claude-code --ignore-scripts
+
+# 运行
+npx win-claude-code@latest
+```
+
 ---
 
 ## RPOMPT
@@ -274,3 +290,6 @@ Claude Code 任務執行完畢
 並回報結果
 與說明測試方式
 ![Todo List 截圖](./images/ClaudeCodeTodoList.png)
+
+---
+
