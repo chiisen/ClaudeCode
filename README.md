@@ -7,12 +7,21 @@
 
 ## Windows 安裝方式
 請參考: [GitHub: Windows版 Claude Code](https://github.com/somersby10ml/win-claude-code/blob/main/docs/languages/README.zh.md)
+
 ```bash
 # 全局安装 Claude Code
 npm install -g @anthropic-ai/claude-code --ignore-scripts
 
 # 运行
 npx win-claude-code@latest
+```
+##　新增環境變數
+```bash
+# Claude Code (用 Anyrouter 連接)
+$Env:ANTHROPIC_AUTH_TOKEN = 'sk-....'
+$Env:ANTHROPIC_BASE_URL = 'https://anyrouter.top'
+
+$Env:CLAUDE_CODE_GIT_BASH_PATH = "C:\Program Files\Git\git-bash.exe"
 ```
 
 ---
