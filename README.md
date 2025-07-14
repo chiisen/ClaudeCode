@@ -269,7 +269,7 @@ Claude Code 任務執行完畢，並回報結果與測試方式。
 
 ---
 
-# /memory
+## /memory
 輸入 # 可以讓 claude 記住一些你要他記憶的事情
 譬如:
 ```bash
@@ -297,3 +297,28 @@ Learn more: https://docs.anthropic.com/en/docs/claude-code/memory
 ```
 如果選 `3. User memory` 你開其他專案也能作用到，1 或 2 則是作用在本地專案。
 
+## Ctrl + R
+展開摺疊程式碼(把隱藏的程式碼打開來看)
+
+## Shift + Tab 模式切換
+一般模式
+auto-accept 自動允許模式
+plan mode 計畫模式
+
+## Prompt 關鍵字 think
+加上 think 會驅使 claude 做深度思考
+```bash
+think
+think hard
+think harder
+ultra think
+```
+越下面越強
+
+## 快速刪除 Prompt
+對話框有內容時
+雙擊 Esc
+
+##　歷史紀錄
+對話框沒內容時
+雙擊 Esc
