@@ -269,3 +269,31 @@ Claude Code 任務執行完畢，並回報結果與測試方式。
 
 ---
 
+# /memory
+輸入 # 可以讓 claude 記住一些你要他記憶的事情
+譬如:
+```bash
+# 永遠使用中文回覆
+
+# 我叫 Eli
+```
+接著會問你要記憶在那?
+```bash
+Memory Files
+ L user: C:\Users\chiis\.claude\CLAUDE.md
+ L project: CLAUDE.md
+
+Learn more: https://docs.anthropic.com/en/docs/claude-code/memory
+
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                      │
+│ Select memory to edit:                                                                                                               │
+│                                                                                                                                      │
+│    1. Project memory          Checked in at ./CLAUDE.md                                                                              │
+│    2. Project memory (local)  Gitignored in ./CLAUDE.local.md                                                                        │
+│  ❯ 3. User memory             Saved in ~/.claude/CLAUDE.md                                                                           │
+│                                                                                                                                      │
+│ 2 memories in ~/CLAUDE.md
+```
+如果選 `3. User memory` 你開其他專案也能作用到，1 或 2 則是作用在本地專案。
+
