@@ -24,6 +24,49 @@ $Env:ANTHROPIC_BASE_URL = 'https://anyrouter.top'
 $Env:CLAUDE_CODE_GIT_BASH_PATH = "C:\Program Files\Git\git-bash.exe"
 ```
 
+## 登入
+![安全風險警告](./images/ClaudeCode01.jpg)
+```bash
+Claude Code may read, write, or execute files contained in this directory. This can pose security risks, so only use files from trusted sources. 
+```
+```bash
+Claude Code 可能會讀取、寫入或執行此目錄中的檔案。這可能會帶來安全風險，因此請僅使用來自可信任來源的文件。
+```
+![指令 '/' 說明](./images/ClaudeCode02.jpg)
+```bash
+Tips for getting started:
+
+  Run /terminal-setup to set up terminal integration
+  Use Claude to help with file analysis, editing, bash commands and git 
+  Be as specific as you would with another engineer for the best results
+  ✔ Run /init to create a CLAUDE.md file with instructions for Claude
+```
+```bash
+入門提示：
+
+運行 /terminal-setup 設定終端集成
+使用 Claude 幫助進行文件分析、編輯、bash 命令和 git
+為了獲得最佳效果，請像對待其他工程師一樣具體地說明。
+✔ 執行 /init 建立包含 Claude 說明的 CLAUDE.md 文件
+```
+![ClaudeCode03](./images/ClaudeCode03.jpg)
+```bash
+✻ Welcome to Claude Code for VS Code
+   installed extension v1.0.90
+  • Claude has context of ⧉ open files and ⧉ selected lines
+  • Review Claude Code's changes +11 -22 in the comfort of your IDE
+  • Cmd+Esc for Quick Launch
+  • Ctrl+Alt+K to reference files or lines in your input
+```
+```bash
+✻ 歡迎使用 VS Code 的 Claude Code
+已安裝擴充 v1.0.90
+• Claude 具有 ⧉ 個開啟檔案和 ⧉ 個選取行的上下文
+• 在 IDE 中舒適地查看 Claude Code 的變更 +11 -22
+• Cmd+Esc 快速啟動
+• Ctrl+Alt+K 引用輸入中的檔案或行
+```
+
 ---
 
 ## PROMPT 範例
