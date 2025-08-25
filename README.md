@@ -32,7 +32,7 @@ Claude Code may read, write, or execute files contained in this directory. This 
 ```bash
 Claude Code 可能會讀取、寫入或執行此目錄中的檔案。這可能會帶來安全風險，因此請僅使用來自可信任來源的文件。
 ```
-![指令 '/' 說明](./images/ClaudeCode02.jpg)
+![指令說明](./images/ClaudeCode02.jpg)
 ```bash
 Tips for getting started:
 
@@ -49,7 +49,7 @@ Tips for getting started:
 為了獲得最佳效果，請像對待其他工程師一樣具體地說明。
 ✔ 執行 /init 建立包含 Claude 說明的 CLAUDE.md 文件
 ```
-![ClaudeCode03](./images/ClaudeCode03.jpg)
+![VS Code 的 Claude Code 說明](./images/ClaudeCode03.jpg)
 ```bash
 ✻ Welcome to Claude Code for VS Code
    installed extension v1.0.90
