@@ -374,3 +374,62 @@ ultra think
 ##　歷史紀錄
 對話框沒內容時
 雙擊 Esc
+
+---
+
+## ⚠️ 2026 年更新資訊 (請參考)
+
+### Windows 安裝方式 (官方推薦)
+> 2025年後官方已推出原生安裝方式，不再需要透過 npm 或第三方工具
+
+**PowerShell (推薦)**：
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**WinGet**：
+```powershell
+winget install Anthropic.ClaudeCode
+```
+
+**驗證安裝**：
+```bash
+claude --version
+claude doctor
+```
+
+### 環境變數設定 (正確名稱)
+> 舊版變數名稱 `ANTHROPIC_AUTH_TOKEN` 已廢除，請使用新名稱
+
+```bash
+# Claude Code (API Key)
+$Env:ANTHROPIC_API_KEY = 'sk-....'
+
+# 自訂 API 端點 (如使用 proxy)
+$Env:ANTHROPIC_BASE_URL = 'https://anyrouter.top'
+
+# Git Bash 路徑 (Windows)
+$Env:CLAUDE_CODE_GIT_BASH_PATH = "C:\Program Files\Git\bin\bash.exe"
+```
+
+### 版本資訊
+- **目前穩定版本**：v2.1.x (2026年2月最新為 v2.1.63)
+- **VS Code 擴充**：請至 VS Code 擴充商店更新至最新版本
+
+### 快捷鍵說明
+- **Ctrl + R**：在終端機中是「反向搜尋歷史指令」(reverse-i-search)，非「展開摺疊程式碼」
+- 展開/摺疊程式碼請使用 VS Code 原生快捷鍵
+
+### 安裝後初始設定
+```bash
+# 第一次執行會引導登入
+claude
+
+# 或設定 API Key
+claude config set api-key
+```
+
+### 官方文件
+- [官方安裝指南](https://claudefa.st/blog/guide/installation-guide)
+- [環境變數配置](https://www.claudeinsider.com/docs/configuration/environment)
+- [完整更新日誌](https://claudefa.st/blog/guide/changelog)
