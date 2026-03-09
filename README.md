@@ -18,10 +18,10 @@ npx win-claude-code@latest
 ##　新增環境變數
 ```bash
 # Claude Code (用 Anyrouter 連接)
-$Env:ANTHROPIC_AUTH_TOKEN = 'sk-....'
+$Env:ANTHROPIC_API_KEY = 'sk-....'
 $Env:ANTHROPIC_BASE_URL = 'https://anyrouter.top'
 
-$Env:CLAUDE_CODE_GIT_BASH_PATH = "C:\Program Files\Git\git-bash.exe"
+$Env:CLAUDE_CODE_GIT_BASH_PATH = "C:\Program Files\Git\bin\bash.exe"
 ```
 
 ## 登入
@@ -350,12 +350,15 @@ Learn more: https://docs.anthropic.com/en/docs/claude-code/memory
 如果選 `3. User memory` 你開其他專案也能作用到，1 或 2 則是作用在本地專案。
 
 ## Ctrl + R
-展開摺疊程式碼(把隱藏的程式碼打開來看)
+在終端機中是「反向搜尋歷史指令」(reverse-i-search)，非「展開摺疊程式碼」
+- 展開/摺疊程式碼請使用 VS Code 原生快捷鍵
 
 ## Shift + Tab 模式切換
-一般模式
-auto-accept 自動允許模式
-plan mode 計畫模式
+- **一般模式**：正常互動模式
+- **auto-accept 模式**：自動允許執行所有操作（不詢問確認）
+- **plan mode 模式**：僅規劃工作，不實際執行
+
+切換方式：連續按 Shift + Tab
 
 ## Prompt 關鍵字 think
 加上 think 會驅使 claude 做深度思考
