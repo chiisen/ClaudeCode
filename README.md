@@ -6,22 +6,36 @@
 ---
 
 ## Windows 安裝方式
-請參考: [GitHub: Windows版 Claude Code](https://github.com/somersby10ml/win-claude-code/blob/main/docs/languages/README.zh.md)
+請參考: [Claude Code Docs =>  安裝 => 安裝最新版本 (預設) => Windows PowerShell](https://code.claude.com/docs/zh-TW/setup#windows-powershell)
 
 ```bash
-# 全局安装 Claude Code
-npm install -g @anthropic-ai/claude-code --ignore-scripts
-
-# 运行
-npx win-claude-code@latest
+irm https://claude.ai/install.ps1 | iex
 ```
-##　新增環境變數
+## 新增環境變數
+參考: [Configure MiniMax API](https://platform.minimax.io/docs/coding-plan/claude-code#configure-minimax-api)
+[CC Switch](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md)
+
 ```bash
 # Claude Code (用 Anyrouter 連接)
-$Env:ANTHROPIC_API_KEY = 'sk-....'
-$Env:ANTHROPIC_BASE_URL = 'https://anyrouter.top'
+$Env:ANTHROPIC_API_KEY='sk-....'
+$Env:ANTHROPIC_BASE_URL='https://api.minimax.io/anthropic'
+$env:CLAUDE_CODE_GIT_BASH_PATH="C:\Program Files\Git\bin\bash.exe"
+```
 
-$Env:CLAUDE_CODE_GIT_BASH_PATH = "C:\Program Files\Git\bin\bash.exe"
+```bash
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "sk-....",
+    "ANTHROPIC_BASE_URL": "https://api.minimax.io/anthropic",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "MiniMax-M2.5",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "MiniMax-M2.5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "MiniMax-M2.5",
+    "ANTHROPIC_MODEL": "MiniMax-M2.5",
+    "API_TIMEOUT_MS": "3000000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1
+  },
+  "includeCoAuthoredBy": false
+}
 ```
 
 ## 登入
@@ -374,7 +388,7 @@ ultra think
 對話框有內容時
 雙擊 Esc
 
-##　歷史紀錄
+## 歷史紀錄
 對話框沒內容時
 雙擊 Esc
 
