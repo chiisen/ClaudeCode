@@ -1,4 +1,5 @@
 # ClaudeCode
+
 這是我用來測試 Claude Code 編程能力的專案，主要記錄我操作 Claude Code 的步驟與流程。
 
 因為 Claude Code 推出了 Windows 版本，我也在此進行測試，並將相關筆記記錄下來。
@@ -6,12 +7,15 @@
 ---
 
 ## Windows 安裝方式
-請參考: [Claude Code Docs =>  安裝 => 安裝最新版本 (預設) => Windows PowerShell](https://code.claude.com/docs/zh-TW/setup#windows-powershell)
+
+請參考: [Claude Code Docs => 安裝 => 安裝最新版本 (預設) => Windows PowerShell](https://code.claude.com/docs/zh-TW/setup#windows-powershell)
 
 ```bash
 irm https://claude.ai/install.ps1 | iex
 ```
+
 ## 新增環境變數
+
 參考: [Configure MiniMax API](https://platform.minimax.io/docs/coding-plan/claude-code#configure-minimax-api)
 [CC Switch](https://github.com/farion1231/cc-switch/blob/main/README_ZH.md)
 
@@ -21,6 +25,10 @@ $Env:ANTHROPIC_API_KEY='sk-....'
 $Env:ANTHROPIC_BASE_URL='https://api.minimax.io/anthropic'
 $env:CLAUDE_CODE_GIT_BASH_PATH="C:\Program Files\Git\bin\bash.exe"
 ```
+
+### settings.json
+
+參考： [Claude Code => Configure MiniMax API](https://platform.minimax.io/docs/coding-plan/claude-code)
 
 ```bash
 {
@@ -39,22 +47,28 @@ $env:CLAUDE_CODE_GIT_BASH_PATH="C:\Program Files\Git\bin\bash.exe"
 ```
 
 ## 登入
+
 ![安全風險警告](./images/ClaudeCode01.jpg)
+
 ```bash
-Claude Code may read, write, or execute files contained in this directory. This can pose security risks, so only use files from trusted sources. 
+Claude Code may read, write, or execute files contained in this directory. This can pose security risks, so only use files from trusted sources.
 ```
+
 ```bash
 Claude Code 可能會讀取、寫入或執行此目錄中的檔案。這可能會帶來安全風險，因此請僅使用來自可信任來源的文件。
 ```
+
 ![指令說明](./images/ClaudeCode02.jpg)
+
 ```bash
 Tips for getting started:
 
   Run /terminal-setup to set up terminal integration
-  Use Claude to help with file analysis, editing, bash commands and git 
+  Use Claude to help with file analysis, editing, bash commands and git
   Be as specific as you would with another engineer for the best results
   ✔ Run /init to create a CLAUDE.md file with instructions for Claude
 ```
+
 ```bash
 入門提示：
 
@@ -63,7 +77,9 @@ Tips for getting started:
 為了獲得最佳效果，請像對待其他工程師一樣具體地說明。
 ✔ 執行 /init 建立包含 Claude 說明的 CLAUDE.md 文件
 ```
+
 ![VS Code 的 Claude Code 說明](./images/ClaudeCode03.jpg)
+
 ```bash
 ✻ Welcome to Claude Code for VS Code
    installed extension v1.0.90
@@ -72,6 +88,7 @@ Tips for getting started:
   • Cmd+Esc for Quick Launch
   • Ctrl+Alt+K to reference files or lines in your input
 ```
+
 ```bash
 ✻ 歡迎使用 VS Code 的 Claude Code
 已安裝擴充 v1.0.90
@@ -84,12 +101,15 @@ Tips for getting started:
 ---
 
 ## PROMPT 範例
+
 我使用非常簡單的 PROMPT 來描述需求：
+
 ```bash
 幫我建立一個網頁版的 todo list
 ```
 
 ## 操作說明
+
 ```bash
 ╭───────────────────────────────────────────────────╮
 │ ✻ Welcome to Claude Code!                         │
@@ -336,14 +356,18 @@ Claude Code 任務執行完畢，並回報結果與測試方式。
 ---
 
 ## /memory
+
 輸入 # 可以讓 claude 記住一些你要他記憶的事情
 譬如:
+
 ```bash
 # 永遠使用中文回覆
 
 # 我叫 Eli
 ```
+
 接著會問你要記憶在那?
+
 ```bash
 Memory Files
  L user: C:\Users\chiis\.claude\CLAUDE.md
@@ -361,13 +385,17 @@ Learn more: https://docs.anthropic.com/en/docs/claude-code/memory
 │                                                                                                                                      │
 │ 2 memories in ~/CLAUDE.md
 ```
+
 如果選 `3. User memory` 你開其他專案也能作用到，1 或 2 則是作用在本地專案。
 
 ## Ctrl + R
+
 在終端機中是「反向搜尋歷史指令」(reverse-i-search)，非「展開摺疊程式碼」
+
 - 展開/摺疊程式碼請使用 VS Code 原生快捷鍵
 
 ## Shift + Tab 模式切換
+
 - **一般模式**：正常互動模式
 - **auto-accept 模式**：自動允許執行所有操作（不詢問確認）
 - **plan mode 模式**：僅規劃工作，不實際執行
@@ -375,20 +403,25 @@ Learn more: https://docs.anthropic.com/en/docs/claude-code/memory
 切換方式：連續按 Shift + Tab
 
 ## Prompt 關鍵字 think
+
 加上 think 會驅使 claude 做深度思考
+
 ```bash
 think
 think hard
 think harder
 ultra think
 ```
+
 越下面越強
 
 ## 快速刪除 Prompt
+
 對話框有內容時
 雙擊 Esc
 
 ## 歷史紀錄
+
 對話框沒內容時
 雙擊 Esc
 
@@ -397,25 +430,30 @@ ultra think
 ## ⚠️ 2026 年更新資訊 (請參考)
 
 ### Windows 安裝方式 (官方推薦)
+
 > 2025年後官方已推出原生安裝方式，不再需要透過 npm 或第三方工具
 
 **PowerShell (推薦)**：
+
 ```powershell
 irm https://claude.ai/install.ps1 | iex
 ```
 
 **WinGet**：
+
 ```powershell
 winget install Anthropic.ClaudeCode
 ```
 
 **驗證安裝**：
+
 ```bash
 claude --version
 claude doctor
 ```
 
 ### 環境變數設定 (正確名稱)
+
 > 舊版變數名稱 `ANTHROPIC_AUTH_TOKEN` 已廢除，請使用新名稱
 
 ```bash
@@ -430,14 +468,17 @@ $Env:CLAUDE_CODE_GIT_BASH_PATH = "C:\Program Files\Git\bin\bash.exe"
 ```
 
 ### 版本資訊
+
 - **目前穩定版本**：v2.1.x (2026年2月最新為 v2.1.63)
 - **VS Code 擴充**：請至 VS Code 擴充商店更新至最新版本
 
 ### 快捷鍵說明
+
 - **Ctrl + R**：在終端機中是「反向搜尋歷史指令」(reverse-i-search)，非「展開摺疊程式碼」
 - 展開/摺疊程式碼請使用 VS Code 原生快捷鍵
 
 ### 安裝後初始設定
+
 ```bash
 # 第一次執行會引導登入
 claude
@@ -447,6 +488,7 @@ claude config set api-key
 ```
 
 ### 官方文件
+
 - [官方安裝指南](https://claudefa.st/blog/guide/installation-guide)
 - [環境變數配置](https://www.claudeinsider.com/docs/configuration/environment)
 - [完整更新日誌](https://claudefa.st/blog/guide/changelog)
